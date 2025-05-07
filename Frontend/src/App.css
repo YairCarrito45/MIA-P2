@@ -1,0 +1,123 @@
+/* Contenedor principal de la aplicación */
+.App {
+  background-color: #344c50; /* Fondo oscuro estilo Nord */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía clara y legible */
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column; /* Apila elementos verticalmente */
+  align-items: center;     /* Centra horizontalmente */
+  padding: 2rem;           /* Espaciado interno */
+}
+
+/* Controles superiores: archivo, ejecutar, limpiar, reporte */
+.controls {
+  display: flex;
+  gap: 1rem;              /* Espacio entre botones */
+  margin-bottom: 2rem;    /* Separación respecto al editor */
+  align-items: center;    /* Alineación vertical centrada */
+}
+
+/* Estilo para todos los botones */
+button {
+  padding: 0.6rem 1.2rem; /* Tamaño cómodo de clic */
+  font-size: 0.9rem;
+  background-color: #88c0d0; /* Azul claro */
+  color: #2e3440;             /* Texto oscuro */
+  border: none;
+  border-radius: 6px;         /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.25s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse sobre los botones */
+button:hover {
+  background-color: #81a1c1; /* Azul un poco más oscuro */
+}
+
+/* Estilo para el input de archivo */
+input[type="file"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ecf4f3; /* Gris claro */
+  color: #1d222b;            /* Texto oscuro */
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Contenedor que alinea entrada y salida en horizontal */
+.editor-container {
+  display: flex;
+  gap: 2rem;                /* Espacio entre entrada/salida */
+  width: 100%;
+  max-width: 1200px;        /* Ancho máximo del bloque */
+  align-items: flex-start;
+}
+
+/* Contenedor de cada bloque (entrada o salida) */
+.editor {
+  flex: 1;                  /* Ambos ocupan el mismo espacio */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas "Entrada:" y "Salida:" */
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #d8dee9;           /* Texto claro */
+}
+
+/* Estilo para el área de salida */
+textarea,
+.salida {
+  min-height: 525px;       /* Igual al editor Monaco */
+  height: auto;
+  max-height: none;        /* Para que pueda crecer todo lo necesario */
+  overflow: hidden;
+  resize: none;
+
+  background-color: rgb(7, 7, 7);
+  color: #00fff2;
+  border-radius: 8px;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  padding: 1rem;
+  width: 96%;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado del proyecto */
+.App-header {
+  width: 96%;
+  max-width: 525px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Título dentro del encabezado */
+.App-header h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #f5f5f5;
+}
+
+/* Contenedor para redondear el editor Monaco */
+.editor-wrapper {
+  border-radius: 8px;
+  overflow: hidden; /* Para que el borde del editor quede redondeado */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1); /* Sombra similar a textarea */
+}
+
+
+/* login  */
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 6px;
+  width: 250px;
+  font-size: 1rem;
+}

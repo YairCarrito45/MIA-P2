@@ -39,8 +39,26 @@ function DiskSelector() {
           ))}
         </div>
       </div>
+  
+      {/* 🔙 Botón de volver al menú */}
+      <button
+        onClick={() => navigate("/")}
+        style={{
+          marginTop: "2rem",
+          padding: "0.6rem 1.2rem",
+          backgroundColor: "#444",
+          color: "white",
+          border: "none",
+          borderRadius: "6px",
+          cursor: "pointer",
+          fontWeight: "bold",
+        }}
+      >
+        Volver al Menú Principal
+      </button>
     </div>
   );
+  
 }
 
 const styles = {

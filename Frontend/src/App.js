@@ -176,25 +176,14 @@ function App() {
                   }}
                 >
                   <LoginForm
-                    onLogin={(info) => {
-                      setUsuarioActual(info);
-                      localStorage.setItem("user", JSON.stringify(info)); // ✅ Guardar sesión
-                      setMostrarLogin(false);
+                        onLogin={(info) => {
+                          setUsuarioActual(info);
+                          localStorage.setItem("user", JSON.stringify(info)); // ✅ Guardar sesión
+                          setMostrarLogin(false);
+                          navigate("/discos"); // ✅ Redirigir al selector de discos
+                        }}
+                      />
 
-                      navigate(`/viewer/${info.partitionId}`, {
-                        state: {
-                          disk: {
-                            name: info.partitionId,
-                            partition_id: info.partitionId,
-                            mounted_partitions: [],
-                            size: "Desconocido",
-                            fit: "Desconocido",
-                            path: "Desconocido",
-                          },
-                        },
-                      });
-                    }}
-                  />
                   <button
                     onClick={() => setMostrarLogin(false)}
                     style={{

@@ -1,105 +1,128 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams, useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-function DiskViewer() {
-  const { nombre } = useParams();
+function PartitionSelector() {
   const location = useLocation();
-  const disk = location.state?.disk;
-  const [structure, setStructure] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (disk?.partition_id) {
-      fetch(`http://localhost:3001/filesystem/${disk.partition_id}`)
-        .then((res) => res.json())
-        .then((data) => setStructure(data))
-        .catch(() => setStructure({ error: true }));
-    }
-  }, [disk]);
+  // ✅ Soporte de fallback con localStorage
+  const diskPath = location.state?.path || localStorage.getItem("selectedDiskPath");
 
-  const renderTree = (node, level = 0) => {
-    const paddingLeft = 20 * level;
-    return (
-      <div key={node.name + level + Math.random()} style={{ paddingLeft }}>
-        <p>
-          {node.type === "folder" ? "📁" : "📄"} {node.name}
-        </p>
-        {node.children?.map((child) => renderTree(child, level + 1))}
-      </div>
-    );
+  const [partitions, setPartitions] = useState([]);
+
+  useEffect(() => {
+    if (diskPath) {
+      fetch(`http://localhost:3001/partitions?path=${encodeURIComponent(diskPath)}`)
+        .then((res) => res.json())
+        .then((data) => setPartitions(Array.isArray(data) ? data : []))
+        .catch(() => setPartitions([]));
+    }
+  }, [diskPath]);
+
+  const handleSelectPartition = (partition) => {
+    navigate(`/viewer/${partition.id}`, {
+      state: {
+        disk: {
+          name: partition.name,
+          partition_id: partition.id,
+          path: diskPath,
+          size: partition.size,
+          fit: partition.fit,
+          status: partition.status,
+        },
+      },
+    });
   };
 
   return (
-    <div style={styles.container}>
-      <h2 style={styles.title}>Explorador del Disco: {nombre}</h2>
+    <div style={styles.page}>
+      <div style={styles.card}>
+        <h2 style={styles.title}>Visualizador del Sistema de Archivos</h2>
+        <p style={styles.subtitle}>Seleccione la partición que desea visualizar:</p>
 
-      <button
-        onClick={() => navigate("/discos")}
-        style={styles.backButton}
-      >
-        ← Volver a Discos
-      </button>
-
-      {disk ? (
-        <div style={styles.infoBox}>
-          <p><strong>Nombre:</strong> {disk.name}</p>
-          <p><strong>Ruta:</strong> {disk.path}</p>
-          <p><strong>Tamaño:</strong> {disk.size}</p>
-          <p><strong>Fit:</strong> {disk.fit}</p>
-          <p><strong>Particiones Montadas:</strong> {disk.mounted_partitions.join(", ")}</p>
-
-          <div style={styles.treeBox}>
-            {structure ? (
-              structure.error ? (
-                <p style={{ color: "red" }}>Error al cargar estructura.</p>
-              ) : (
-                renderTree(structure)
-              )
-            ) : (
-              <p>Cargando estructura...</p>
-            )}
-          </div>
+        <div style={styles.grid}>
+          {partitions.length > 0 ? (
+            partitions.map((p) => (
+              <div
+                key={p.id}
+                style={styles.partitionCard}
+                onClick={() => handleSelectPartition(p)}
+              >
+                <img src="/partition-icon.png" alt="Partición" style={styles.img} />
+                <p><strong>{p.name}</strong></p>
+                <p><strong>Tamaño:</strong> {p.size}</p>
+                <p><strong>Fit:</strong> {p.fit}</p>
+                <p><strong>Estado:</strong> {p.status}</p>
+              </div>
+            ))
+          ) : (
+            <p style={{ color: "#777" }}>No se encontraron particiones activas.</p>
+          )}
         </div>
-      ) : (
-        <p style={{ color: "red" }}>No se encontró información del disco.</p>
-      )}
+
+        <button onClick={() => navigate("/discos")} style={styles.backBtn}>
+          Volver a Discos
+        </button>
+      </div>
     </div>
   );
 }
 
 const styles = {
-  container: {
-    padding: "2rem",
+  page: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "100vh",
+    backgroundColor: "#f4f4f4",
     fontFamily: "Segoe UI, sans-serif",
+  },
+  card: {
+    backgroundColor: "#ffffff",
+    padding: "2.5rem",
+    borderRadius: "12px",
+    boxShadow: "0 4px 16px rgba(0,0,0,0.1)",
+    width: "90%",
+    maxWidth: "800px",
+    textAlign: "center",
   },
   title: {
     fontSize: "1.8rem",
-    marginBottom: "1rem",
+    marginBottom: "0.5rem",
   },
-  backButton: {
-    padding: "0.5rem 1rem",
+  subtitle: {
     marginBottom: "1.5rem",
-    backgroundColor: "#1976d2",
+    color: "#444",
+  },
+  grid: {
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    gap: "1.5rem",
+  },
+  partitionCard: {
+    backgroundColor: "#eef7f9",
+    borderRadius: "10px",
+    padding: "1rem",
+    cursor: "pointer",
+    width: "160px",
+    boxShadow: "0 3px 8px rgba(0,0,0,0.1)",
+    transition: "transform 0.2s",
+  },
+  img: {
+    width: "48px",
+    marginBottom: "0.5rem",
+  },
+  backBtn: {
+    marginTop: "2rem",
+    padding: "0.6rem 1.2rem",
+    backgroundColor: "#444",
     color: "white",
     border: "none",
     borderRadius: "6px",
     cursor: "pointer",
     fontWeight: "bold",
   },
-  infoBox: {
-    backgroundColor: "#f2f2f2",
-    padding: "1rem",
-    borderRadius: "8px",
-  },
-  treeBox: {
-    marginTop: "2rem",
-    padding: "1rem",
-    backgroundColor: "#ffffff",
-    border: "1px dashed #ccc",
-    borderRadius: "6px",
-    maxHeight: "500px",
-    overflowY: "auto",
-  },
 };
 
-export default DiskViewer;
+export default PartitionSelector;

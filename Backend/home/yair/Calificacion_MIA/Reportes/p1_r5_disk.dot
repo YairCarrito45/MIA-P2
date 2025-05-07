@@ -1,0 +1,33 @@
+digraph G {
+  rankdir=LR;
+  node [shape=none];
+  labelloc="t";
+  label="Reporte de Disco: Disco5";
+  diskStructure [label=<
+    <table border="0" cellborder="1" cellspacing="0" width="1000">
+      <tr>
+        <td bgcolor="#87CEFA" width="0">MBR<br/></td>
+        <td width="250">
+          <table border="0" cellborder="1" cellspacing="0" width="100%">
+            <tr>
+              <td bgcolor="#FFFACD" colspan="10">Extendida<br/>Part51<br/>25.00% del disco</td>
+            </tr>
+            <tr>
+              <td bgcolor="#B0C4DE" width="5">EBR</td>
+              <td bgcolor="#ADD8E6" width="50">Lógica<br/>Part52<br/>5.00%</td>
+              <td bgcolor="#B0C4DE" width="5">EBR</td>
+              <td bgcolor="#ADD8E6" width="50">Lógica<br/>Part54<br/>5.00%</td>
+              <td bgcolor="#B0C4DE" width="5">EBR</td>
+              <td bgcolor="#ADD8E6" width="50">Lógica<br/>Part55<br/>5.00%</td>
+              <td bgcolor="#B0C4DE" width="5">EBR</td>
+              <td bgcolor="#ADD8E6" width="50">Lógica<br/>Part56<br/>5.00%</td>
+              <td bgcolor="#E6E6FA" width="49">Libre<br/>5.00%</td>
+            </tr>
+          </table>
+        </td>
+        <td bgcolor="#98FB98" width="250">Primaria<br/>Part53<br/>25.00% del disco</td>
+        <td bgcolor="#D3D3D3" width="499">Libre<br/>50.00% del disco</td>
+      </tr>
+    </table>
+  >];
+}

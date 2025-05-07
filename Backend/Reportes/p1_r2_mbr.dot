@@ -1,0 +1,147 @@
+digraph { 
+node [ shape=none ] 
+TablaReportNodo [ label = < <table border="1"> 
+ <tr>
+  <td bgcolor='SlateBlue' COLSPAN="2"> Reporte MBR </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> mbr_tamano </td> 
+  <td bgcolor='Azure'> 52428800 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='#AFA1D1'> mbr_fecha_creacion </td> 
+  <td bgcolor='#AFA1D1'> 03/04/2025 16:28:30 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> mbr_disk_signature </td> 
+  <td bgcolor='Azure'> 3028 </td> 
+ </tr>  
+ <tr>
+ <td bgcolor='#028f76' COLSPAN="2"> PARTICION </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_status </td> 
+ <td bgcolor='#aad4cf'> 1 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_type </td> 
+ <td bgcolor='#aad4cf'> P </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_fit </td> 
+ <td bgcolor='#aad4cf'> B </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_start </td> 
+ <td bgcolor='#aad4cf'> 168 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_size </td> 
+ <td bgcolor='#aad4cf'> 10485760 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_name </td> 
+ <td bgcolor='#aad4cf'> Part11 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_id </td> 
+ <td bgcolor='#aad4cf'> 291A </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#028f76' COLSPAN="2"> PARTICION </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_status </td> 
+ <td bgcolor='#aad4cf'> 1 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_type </td> 
+ <td bgcolor='#aad4cf'> P </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_fit </td> 
+ <td bgcolor='#aad4cf'> B </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_start </td> 
+ <td bgcolor='#aad4cf'> 10485928 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_size </td> 
+ <td bgcolor='#aad4cf'> 10485760 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_name </td> 
+ <td bgcolor='#aad4cf'> Part12 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_id </td> 
+ <td bgcolor='#aad4cf'> 292A </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#028f76' COLSPAN="2"> PARTICION </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_status </td> 
+ <td bgcolor='#aad4cf'> 0 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_type </td> 
+ <td bgcolor='#aad4cf'> P </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_fit </td> 
+ <td bgcolor='#aad4cf'> B </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_start </td> 
+ <td bgcolor='#aad4cf'> 20971688 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_size </td> 
+ <td bgcolor='#aad4cf'> 10485760 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_name </td> 
+ <td bgcolor='#aad4cf'> Part13 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_id </td> 
+ <td bgcolor='#aad4cf'> - </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#028f76' COLSPAN="2"> PARTICION </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_status </td> 
+ <td bgcolor='#aad4cf'> 0 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_type </td> 
+ <td bgcolor='#aad4cf'> P </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_fit </td> 
+ <td bgcolor='#aad4cf'> B </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_start </td> 
+ <td bgcolor='#aad4cf'> 31457448 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_size </td> 
+ <td bgcolor='#aad4cf'> 10485760 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_name </td> 
+ <td bgcolor='#aad4cf'> Part14 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_id </td> 
+ <td bgcolor='#aad4cf'> - </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#808080' COLSPAN="2"> ESPACIO LIBRE <br/> 10485592 bytes </td> 
+ </tr> 
+</table> > ]
+}

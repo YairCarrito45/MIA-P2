@@ -1,0 +1,807 @@
+digraph { 
+  node [ shape=none ] 
+  rankdir=TB;
+  TablaReportNodo [ label = < <table border="1"> 
+    <tr>
+      <td bgcolor='SlateBlue' COLSPAN="2"> Reporte de Inodos </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 0 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 0 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'> 664 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 1 (Archivo) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 142 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 1 2 3 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Archivo </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 2 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 4 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 3 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 5 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 4 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 6 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 5 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 7 16 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 6 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 8 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 7 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 9 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 8 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 10 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 9 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 11 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 10 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 12 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 11 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 13 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 12 (Archivo) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 75 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 14 15 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Archivo </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'> 664 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 13 (Archivo) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 768 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 17 18 19 20 21 22 23 24 25 26 27 28 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Archivo </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'> 664 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 14 (Archivo) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 8 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 29 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Archivo </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'> 664 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 15 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 30 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 16 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 31 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 17 (Carpeta) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 66404/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ 32 ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Carpeta </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'>  </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#4682B4' COLSPAN="2"> Inodo 18 (Archivo) </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_uid </td> 
+      <td bgcolor='#E6E6FA'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_gid </td> 
+      <td bgcolor='#F0F8FF'> 1 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_size </td> 
+      <td bgcolor='#E6E6FA'> 0 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_atime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_ctime </td> 
+      <td bgcolor='#E6E6FA'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_mtime </td> 
+      <td bgcolor='#F0F8FF'> 03/04/2025 16:28 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_block </td> 
+      <td bgcolor='#E6E6FA'> [ ] </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#E6E6FA'> i_type </td> 
+      <td bgcolor='#E6E6FA'> Archivo </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#F0F8FF'> i_perm </td> 
+      <td bgcolor='#F0F8FF'> 664 </td> 
+    </tr> 
+    <tr>
+      <td bgcolor='#D3D3D3' COLSPAN="2"> </td> 
+    </tr> 
+  </table> > ]
+}

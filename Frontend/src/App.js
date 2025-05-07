@@ -4,7 +4,8 @@ import "./App.css";
 import LoginForm from "./LoginForm";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import DiskSelector from "./DiskSelector";
-import DiskViewer from "./PartitionSelector";
+import PartitionSelector from "./PartitionSelector";
+import FileViewer from "./FileViewer";
 
 function App() {
   const [commandInput, setCommandInput] = useState("");
@@ -14,7 +15,6 @@ function App() {
   const [mostrarLogin, setMostrarLogin] = useState(false);
   const navigate = useNavigate();
 
-  // ✅ Restaurar sesión guardada
   useEffect(() => {
     const savedUser = localStorage.getItem("user");
     if (savedUser) {
@@ -49,21 +49,18 @@ function App() {
 
   const handleExecute = async () => {
     try {
-      const response = await fetch("http://localhost:3001/execute", {
+      const response = await fetch("http://localhost:8080/api/analizar", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          command: commandInput,
-          user: usuarioActual?.username,
-          partitionId: usuarioActual?.partitionId,
+          text: commandInput,
         }),
       });
-
       const result = await response.json();
-      setOutput(result.output);
-    } catch (error) {
+      setOutput(result.output || "Sin salida.");
+
+
+    } catch {
       setOutput("Error al comunicarse con el backend.");
     }
   };
@@ -74,7 +71,7 @@ function App() {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("user"); // ✅ Eliminar sesión guardada
+    localStorage.removeItem("user");
     setUsuarioActual(null);
     setCommandInput("");
     setOutput("");
@@ -90,8 +87,7 @@ function App() {
               <h1>Sistema de Archivos EXT2/EXT3 - Proyecto MIA</h1>
               {usuarioActual && (
                 <p>
-                  Sesión activa: <strong>{usuarioActual.username}</strong> (ID:{" "}
-                  {usuarioActual.partitionId})
+                  Sesión activa: <strong>{usuarioActual.username}</strong> (ID: {usuarioActual.partitionId})
                 </p>
               )}
             </header>
@@ -101,17 +97,11 @@ function App() {
               <button onClick={handleExecute}>Ejecutar</button>
               <button onClick={handleClear}>Limpiar</button>
               {!usuarioActual ? (
-                <button
-                  onClick={() => setMostrarLogin(true)}
-                  style={{ backgroundColor: "#2e7d32", color: "white" }}
-                >
+                <button onClick={() => setMostrarLogin(true)} style={{ backgroundColor: "#2e7d32", color: "white" }}>
                   Iniciar Sesión
                 </button>
               ) : (
-                <button
-                  onClick={handleLogout}
-                  style={{ backgroundColor: "#880e4f", color: "white" }}
-                >
+                <button onClick={handleLogout} style={{ backgroundColor: "#880e4f", color: "white" }}>
                   Cerrar Sesión ({usuarioActual.username})
                 </button>
               )}
@@ -148,7 +138,6 @@ function App() {
               </div>
             </div>
 
-            {/* Modal Login */}
             {mostrarLogin && (
               <>
                 <div
@@ -176,13 +165,13 @@ function App() {
                   }}
                 >
                   <LoginForm
-                        onLogin={(info) => {
-                          setUsuarioActual(info);
-                          localStorage.setItem("user", JSON.stringify(info)); // ✅ Guardar sesión
-                          setMostrarLogin(false);
-                          navigate("/discos"); // ✅ Redirigir al selector de discos
-                        }}
-                      />
+                    onLogin={(info) => {
+                      setUsuarioActual(info);
+                      localStorage.setItem("user", JSON.stringify(info));
+                      setMostrarLogin(false);
+                      navigate("/discos");
+                    }}
+                  />
 
                   <button
                     onClick={() => setMostrarLogin(false)}
@@ -204,9 +193,9 @@ function App() {
           </div>
         }
       />
-
       <Route path="/discos" element={<DiskSelector />} />
-      <Route path="/viewer/:nombre" element={<DiskViewer />} />
+      <Route path="/partitions/:diskName" element={<PartitionSelector />} />
+      <Route path="/viewer/:id" element={<FileViewer />} />
     </Routes>
   );
 }

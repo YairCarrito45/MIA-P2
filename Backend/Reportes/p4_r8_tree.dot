@@ -1,0 +1,518 @@
+digraph G {
+  node [shape=none fontname="Arial"];
+  edge [fontname="Arial", fontsize=10];
+  rankdir=TB;
+  ranksep=0.6;
+  nodesep=0.4;
+  label="Árbol del Sistema de Archivos: Disco1";
+  inodo0 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 0</font></td></tr>
+      <tr><td>ID</td><td>0</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>0</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo1 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 1</font></td></tr>
+      <tr><td>ID</td><td>1</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Archivo</td></tr>
+      <tr><td>Size</td><td>142 bytes</td></tr>
+      <tr><td>AD</td><td>1, 2, 3</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  inodo2 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 2</font></td></tr>
+      <tr><td>ID</td><td>2</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>4</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo3 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 3</font></td></tr>
+      <tr><td>ID</td><td>3</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>5</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo4 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 4</font></td></tr>
+      <tr><td>ID</td><td>4</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>6</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo5 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 5</font></td></tr>
+      <tr><td>ID</td><td>5</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>7, 16</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo6 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 6</font></td></tr>
+      <tr><td>ID</td><td>6</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>8</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo7 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 7</font></td></tr>
+      <tr><td>ID</td><td>7</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>9</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo8 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 8</font></td></tr>
+      <tr><td>ID</td><td>8</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>10</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo9 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 9</font></td></tr>
+      <tr><td>ID</td><td>9</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>11</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo10 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 10</font></td></tr>
+      <tr><td>ID</td><td>10</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>12</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo11 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 11</font></td></tr>
+      <tr><td>ID</td><td>11</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>13</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo12 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 12</font></td></tr>
+      <tr><td>ID</td><td>12</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Archivo</td></tr>
+      <tr><td>Size</td><td>75 bytes</td></tr>
+      <tr><td>AD</td><td>14, 15</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  inodo13 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 13</font></td></tr>
+      <tr><td>ID</td><td>13</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Archivo</td></tr>
+      <tr><td>Size</td><td>768 bytes</td></tr>
+      <tr><td>AD</td><td>17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  inodo14 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 14</font></td></tr>
+      <tr><td>ID</td><td>14</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Archivo</td></tr>
+      <tr><td>Size</td><td>8 bytes</td></tr>
+      <tr><td>AD</td><td>29</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  inodo15 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 15</font></td></tr>
+      <tr><td>ID</td><td>15</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>30</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo16 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 16</font></td></tr>
+      <tr><td>ID</td><td>16</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>31</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo17 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 17</font></td></tr>
+      <tr><td>ID</td><td>17</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Carpeta</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td>32</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFACD"];
+  inodo18 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#4682B4"><font color="white">Inodo 18</font></td></tr>
+      <tr><td>ID</td><td>18</td></tr>
+      <tr><td>UID</td><td>1</td></tr>
+      <tr><td>GID</td><td>1</td></tr>
+      <tr><td>Tipo</td><td>Archivo</td></tr>
+      <tr><td>Size</td><td>0 bytes</td></tr>
+      <tr><td>AD</td><td></td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque0 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 0</td></tr>
+      <tr><td>.</td><td>0</td></tr>
+      <tr><td>..</td><td>0</td></tr>
+      <tr><td>users.txt</td><td>1</td></tr>
+      <tr><td>home</td><td>2</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque1 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 1</td></tr>
+      <tr><td>1,G,root&lt;br/&gt;1,U,roo...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque2 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 2</td></tr>
+      <tr><td>s&lt;br/&gt;6,G,sys&lt;br/&gt;2,...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque3 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 3</td></tr>
+      <tr><td>adm,user2,abc&lt;br/&gt;</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque4 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 4</td></tr>
+      <tr><td>.</td><td>2</td></tr>
+      <tr><td>..</td><td>0</td></tr>
+      <tr><td>archivos</td><td>3</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque5 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 5</td></tr>
+      <tr><td>.</td><td>3</td></tr>
+      <tr><td>..</td><td>2</td></tr>
+      <tr><td>user</td><td>4</td></tr>
+      <tr><td>carpeta1</td><td>7</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque6 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 6</td></tr>
+      <tr><td>.</td><td>4</td></tr>
+      <tr><td>..</td><td>3</td></tr>
+      <tr><td>docs</td><td>5</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque7 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 7</td></tr>
+      <tr><td>.</td><td>5</td></tr>
+      <tr><td>..</td><td>4</td></tr>
+      <tr><td>usac</td><td>6</td></tr>
+      <tr><td>Tarea.txt</td><td>12</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque8 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 8</td></tr>
+      <tr><td>.</td><td>6</td></tr>
+      <tr><td>..</td><td>5</td></tr>
+      <tr><td>archivos</td><td>15</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque9 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 9</td></tr>
+      <tr><td>.</td><td>7</td></tr>
+      <tr><td>..</td><td>3</td></tr>
+      <tr><td>carpeta2</td><td>8</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque10 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 10</td></tr>
+      <tr><td>.</td><td>8</td></tr>
+      <tr><td>..</td><td>7</td></tr>
+      <tr><td>carpeta3</td><td>9</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque11 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 11</td></tr>
+      <tr><td>.</td><td>9</td></tr>
+      <tr><td>..</td><td>8</td></tr>
+      <tr><td>carpeta4</td><td>10</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque12 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 12</td></tr>
+      <tr><td>.</td><td>10</td></tr>
+      <tr><td>..</td><td>9</td></tr>
+      <tr><td>carpeta5</td><td>11</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque13 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 13</td></tr>
+      <tr><td>.</td><td>11</td></tr>
+      <tr><td>..</td><td>10</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque14 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 14</td></tr>
+      <tr><td>01234567890123456789...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque15 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 15</td></tr>
+      <tr><td>45678901234</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque16 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 16</td></tr>
+      <tr><td>.</td><td>5</td></tr>
+      <tr><td>..</td><td>5</td></tr>
+      <tr><td>Tarea2.txt</td><td>13</td></tr>
+      <tr><td>Tarea3.txt</td><td>14</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque17 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 17</td></tr>
+      <tr><td>01234567890123456789...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque18 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 18</td></tr>
+      <tr><td>45678901234567890123...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque19 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 19</td></tr>
+      <tr><td>89012345678901234567...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque20 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 20</td></tr>
+      <tr><td>23456789012345678901...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque21 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 21</td></tr>
+      <tr><td>67890123456789012345...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque22 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 22</td></tr>
+      <tr><td>01234567890123456789...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque23 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 23</td></tr>
+      <tr><td>45678901234567890123...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque24 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 24</td></tr>
+      <tr><td>89012345678901234567...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque25 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 25</td></tr>
+      <tr><td>23456789012345678901...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque26 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 26</td></tr>
+      <tr><td>67890123456789012345...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque27 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 27</td></tr>
+      <tr><td>01234567890123456789...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque28 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 28</td></tr>
+      <tr><td>45678901234567890123...</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque29 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#87CEFA">Bloque Archivo 29</td></tr>
+      <tr><td>Giovanni</td></tr>
+    </table>
+  >, style=filled, fillcolor="#E6F5FF"];
+  bloque30 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 30</td></tr>
+      <tr><td>.</td><td>15</td></tr>
+      <tr><td>..</td><td>6</td></tr>
+      <tr><td>proyectos</td><td>16</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque31 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 31</td></tr>
+      <tr><td>.</td><td>16</td></tr>
+      <tr><td>..</td><td>15</td></tr>
+      <tr><td>fase1</td><td>17</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  bloque32 [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#F0E68C">Bloque Carpeta 32</td></tr>
+      <tr><td>.</td><td>17</td></tr>
+      <tr><td>..</td><td>16</td></tr>
+      <tr><td>entrada.txt</td><td>18</td></tr>
+    </table>
+  >, style=filled, fillcolor="#FFFFCC"];
+  inodo0 -> bloque0 [label="AD[0]"];
+  inodo1 -> bloque1 [label="AD[0]"];
+  inodo1 -> bloque2 [label="AD[1]"];
+  inodo1 -> bloque3 [label="AD[2]"];
+  inodo2 -> bloque4 [label="AD[0]"];
+  inodo3 -> bloque5 [label="AD[0]"];
+  inodo4 -> bloque6 [label="AD[0]"];
+  inodo5 -> bloque7 [label="AD[0]"];
+  inodo5 -> bloque16 [label="AD[1]"];
+  inodo6 -> bloque8 [label="AD[0]"];
+  inodo7 -> bloque9 [label="AD[0]"];
+  inodo8 -> bloque10 [label="AD[0]"];
+  inodo9 -> bloque11 [label="AD[0]"];
+  inodo10 -> bloque12 [label="AD[0]"];
+  inodo11 -> bloque13 [label="AD[0]"];
+  inodo12 -> bloque14 [label="AD[0]"];
+  inodo12 -> bloque15 [label="AD[1]"];
+  inodo13 -> bloque17 [label="AD[0]"];
+  inodo13 -> bloque18 [label="AD[1]"];
+  inodo13 -> bloque19 [label="AD[2]"];
+  inodo13 -> bloque20 [label="AD[3]"];
+  inodo13 -> bloque21 [label="AD[4]"];
+  inodo13 -> bloque22 [label="AD[5]"];
+  inodo13 -> bloque23 [label="AD[6]"];
+  inodo13 -> bloque24 [label="AD[7]"];
+  inodo13 -> bloque25 [label="AD[8]"];
+  inodo13 -> bloque26 [label="AD[9]"];
+  inodo13 -> bloque27 [label="AD[10]"];
+  inodo13 -> bloque28 [label="AD[11]"];
+  inodo14 -> bloque29 [label="AD[0]"];
+  inodo15 -> bloque30 [label="AD[0]"];
+  inodo16 -> bloque31 [label="AD[0]"];
+  inodo17 -> bloque32 [label="AD[0]"];
+  bloque0 -> inodo1 [label="users.txt"];
+  bloque0 -> inodo2 [label="home"];
+  bloque4 -> inodo3 [label="archivos"];
+  bloque6 -> inodo5 [label="docs"];
+  bloque8 -> inodo15 [label="archivos"];
+  bloque9 -> inodo8 [label="carpeta2"];
+  bloque30 -> inodo16 [label="proyectos"];
+  bloque32 -> inodo18 [label="entrada.txt"];
+  bloque10 -> inodo9 [label="carpeta3"];
+  bloque11 -> inodo10 [label="carpeta4"];
+  bloque31 -> inodo17 [label="fase1"];
+  bloque16 -> inodo13 [label="Tarea2.txt"];
+  bloque16 -> inodo14 [label="Tarea3.txt"];
+  bloque12 -> inodo11 [label="carpeta5"];
+  bloque5 -> inodo4 [label="user"];
+  bloque5 -> inodo7 [label="carpeta1"];
+  bloque7 -> inodo6 [label="usac"];
+  bloque7 -> inodo12 [label="Tarea.txt"];
+  { rank=min; inodo0; }
+  subgraph nivel_1 {
+    rank=same;
+  }
+  subgraph nivel_2 {
+    rank=same;
+  }
+  subgraph nivel_3 {
+    rank=same;
+  }
+  subgraph nivel_4 {
+    rank=same;
+  }
+  subgraph nivel_5 {
+    rank=same;
+  }
+  subgraph nivel_6 {
+    rank=same;
+  }
+}

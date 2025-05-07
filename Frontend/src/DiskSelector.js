@@ -19,7 +19,16 @@ function DiskSelector() {
         <p style={styles.subtitle}>Seleccione el disco que desea visualizar:</p>
         <div style={styles.grid}>
           {disks.map((disk) => (
-            <div key={disk.name} style={styles.diskCard}>
+            <div
+              key={disk.name}
+              style={styles.diskCard}
+              onClick={() => {
+                localStorage.setItem("selectedDiskPath", disk.path);
+                navigate(`/partitions/${encodeURIComponent(disk.name)}`);
+              }}
+              
+              
+            >
               <img src="/disk-icon.png" alt="Disco" style={styles.diskImage} />
               <p style={styles.diskLabel}>{disk.name}</p>
               <div style={styles.diskInfo}>
@@ -35,16 +44,7 @@ function DiskSelector() {
 
       <button
         onClick={() => navigate("/")}
-        style={{
-          marginTop: "2rem",
-          padding: "0.6rem 1.2rem",
-          backgroundColor: "#444",
-          color: "white",
-          border: "none",
-          borderRadius: "6px",
-          cursor: "pointer",
-          fontWeight: "bold",
-        }}
+        style={styles.backBtn}
       >
         Volver al Menú Principal
       </button>
@@ -97,6 +97,7 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     transition: "transform 0.2s",
+    cursor: "pointer",
   },
   diskImage: {
     width: "48px",
@@ -112,6 +113,16 @@ const styles = {
     textAlign: "left",
     lineHeight: "1.2rem",
     width: "100%",
+  },
+  backBtn: {
+    marginTop: "2rem",
+    padding: "0.6rem 1.2rem",
+    backgroundColor: "#444",
+    color: "white",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+    fontWeight: "bold",
   },
 };
 

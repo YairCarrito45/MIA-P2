@@ -1,0 +1,177 @@
+digraph { 
+node [ shape=none ] 
+TablaReportNodo [ label = < <table border="1"> 
+ <tr>
+  <td bgcolor='SlateBlue' COLSPAN="2"> Reporte MBR </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> mbr_tamano </td> 
+  <td bgcolor='Azure'> 20971520 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='#AFA1D1'> mbr_fecha_creacion </td> 
+  <td bgcolor='#AFA1D1'> 03/04/2025 16:28:31 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> mbr_disk_signature </td> 
+  <td bgcolor='Azure'> 3128 </td> 
+ </tr>  
+ <tr>
+ <td bgcolor='#028f76' COLSPAN="2"> PARTICION </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_status </td> 
+ <td bgcolor='#aad4cf'> 0 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_type </td> 
+ <td bgcolor='#aad4cf'> E </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_fit </td> 
+ <td bgcolor='#aad4cf'> B </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_start </td> 
+ <td bgcolor='#aad4cf'> 168 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_size </td> 
+ <td bgcolor='#aad4cf'> 5242880 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_name </td> 
+ <td bgcolor='#aad4cf'> Part51 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_id </td> 
+ <td bgcolor='#aad4cf'> - </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#1e646e' COLSPAN="2"> PARTICION LOGICA </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_status </td> 
+ <td bgcolor='#66a5ad'> 0 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#4f98a8'> part_fit </td> 
+ <td bgcolor='#4f98a8'> B </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_start </td> 
+ <td bgcolor='#66a5ad'> 168 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#4f98a8'> part_size </td> 
+ <td bgcolor='#4f98a8'> 1048576 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_name </td> 
+ <td bgcolor='#66a5ad'> Part52 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#1e646e' COLSPAN="2"> PARTICION LOGICA </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_status </td> 
+ <td bgcolor='#66a5ad'> 0 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#4f98a8'> part_fit </td> 
+ <td bgcolor='#4f98a8'> B </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_start </td> 
+ <td bgcolor='#66a5ad'> 1048775 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#4f98a8'> part_size </td> 
+ <td bgcolor='#4f98a8'> 1048576 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_name </td> 
+ <td bgcolor='#66a5ad'> Part54 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#1e646e' COLSPAN="2"> PARTICION LOGICA </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_status </td> 
+ <td bgcolor='#66a5ad'> 0 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#4f98a8'> part_fit </td> 
+ <td bgcolor='#4f98a8'> B </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_start </td> 
+ <td bgcolor='#66a5ad'> 2097382 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#4f98a8'> part_size </td> 
+ <td bgcolor='#4f98a8'> 1048576 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_name </td> 
+ <td bgcolor='#66a5ad'> Part55 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#1e646e' COLSPAN="2"> PARTICION LOGICA </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_status </td> 
+ <td bgcolor='#66a5ad'> 0 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#4f98a8'> part_fit </td> 
+ <td bgcolor='#4f98a8'> B </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_start </td> 
+ <td bgcolor='#66a5ad'> 3145989 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#4f98a8'> part_size </td> 
+ <td bgcolor='#4f98a8'> 1048576 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#66a5ad'> part_name </td> 
+ <td bgcolor='#66a5ad'> Part56 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#028f76' COLSPAN="2"> PARTICION </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_status </td> 
+ <td bgcolor='#aad4cf'> 1 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_type </td> 
+ <td bgcolor='#aad4cf'> P </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_fit </td> 
+ <td bgcolor='#aad4cf'> B </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_start </td> 
+ <td bgcolor='#aad4cf'> 5243048 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_size </td> 
+ <td bgcolor='#aad4cf'> 5242880 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_name </td> 
+ <td bgcolor='#aad4cf'> Part53 </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#aad4cf'> part_id </td> 
+ <td bgcolor='#aad4cf'> 291C </td> 
+ </tr> 
+ <tr>
+ <td bgcolor='#808080' COLSPAN="2"> ESPACIO LIBRE <br/> 10485592 bytes </td> 
+ </tr> 
+</table> > ]
+}

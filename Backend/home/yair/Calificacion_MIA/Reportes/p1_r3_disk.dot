@@ -1,0 +1,17 @@
+digraph G {
+  rankdir=LR;
+  node [shape=none];
+  labelloc="t";
+  label="Reporte de Disco: Disco3";
+  diskStructure [label=<
+    <table border="0" cellborder="1" cellspacing="0" width="1000">
+      <tr>
+        <td bgcolor="#87CEFA" width="0">MBR<br/></td>
+        <td bgcolor="#98FB98" width="307">Primaria<br/>Part31<br/>30.77% del disco</td>
+        <td bgcolor="#98FB98" width="307">Primaria<br/>Part32<br/>30.77% del disco</td>
+        <td bgcolor="#98FB98" width="76">Primaria<br/>Part33<br/>7.69% del disco</td>
+        <td bgcolor="#D3D3D3" width="307">Libre<br/>30.77% del disco</td>
+      </tr>
+    </table>
+  >];
+}

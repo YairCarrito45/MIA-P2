@@ -1,0 +1,251 @@
+digraph G {
+  node [shape=plaintext];
+  rankdir=TB;
+  label="Reporte de Bloques: Disco1";
+  bloque0 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 0</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>0</td></tr>
+      <tr><td>..</td><td>0</td></tr>
+      <tr><td>users.txt</td><td>1</td></tr>
+      <tr><td>home</td><td>2</td></tr>
+    </table>
+  >];
+  bloque1 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 1</td></tr>
+      <tr><td>1,G,root&lt;br/&gt;1,U,root,root,123...</td></tr>
+    </table>
+  >];
+  bloque2 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 2</td></tr>
+      <tr><td>s&lt;br/&gt;6,G,sys&lt;br/&gt;2,U,root,usu...</td></tr>
+    </table>
+  >];
+  bloque3 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 3</td></tr>
+      <tr><td>adm,user2,abc&lt;br/&gt;</td></tr>
+    </table>
+  >];
+  bloque4 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 4</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>2</td></tr>
+      <tr><td>..</td><td>0</td></tr>
+      <tr><td>archivos</td><td>3</td></tr>
+    </table>
+  >];
+  bloque5 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 5</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>3</td></tr>
+      <tr><td>..</td><td>2</td></tr>
+      <tr><td>user</td><td>4</td></tr>
+      <tr><td>carpeta1</td><td>7</td></tr>
+    </table>
+  >];
+  bloque6 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 6</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>4</td></tr>
+      <tr><td>..</td><td>3</td></tr>
+      <tr><td>docs</td><td>5</td></tr>
+    </table>
+  >];
+  bloque7 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 7</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>5</td></tr>
+      <tr><td>..</td><td>4</td></tr>
+      <tr><td>usac</td><td>6</td></tr>
+      <tr><td>Tarea.txt</td><td>12</td></tr>
+    </table>
+  >];
+  bloque8 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 8</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>6</td></tr>
+      <tr><td>..</td><td>5</td></tr>
+      <tr><td>archivos</td><td>15</td></tr>
+    </table>
+  >];
+  bloque9 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 9</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>7</td></tr>
+      <tr><td>..</td><td>3</td></tr>
+      <tr><td>carpeta2</td><td>8</td></tr>
+    </table>
+  >];
+  bloque10 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 10</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>8</td></tr>
+      <tr><td>..</td><td>7</td></tr>
+      <tr><td>carpeta3</td><td>9</td></tr>
+    </table>
+  >];
+  bloque11 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 11</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>9</td></tr>
+      <tr><td>..</td><td>8</td></tr>
+      <tr><td>carpeta4</td><td>10</td></tr>
+    </table>
+  >];
+  bloque12 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 12</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>10</td></tr>
+      <tr><td>..</td><td>9</td></tr>
+      <tr><td>carpeta5</td><td>11</td></tr>
+    </table>
+  >];
+  bloque13 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 13</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>11</td></tr>
+      <tr><td>..</td><td>10</td></tr>
+    </table>
+  >];
+  bloque14 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 14</td></tr>
+      <tr><td>012345678901234567890123456789...</td></tr>
+    </table>
+  >];
+  bloque15 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 15</td></tr>
+      <tr><td>45678901234</td></tr>
+    </table>
+  >];
+  bloque16 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 16</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>5</td></tr>
+      <tr><td>..</td><td>5</td></tr>
+      <tr><td>Tarea2.txt</td><td>13</td></tr>
+      <tr><td>Tarea3.txt</td><td>14</td></tr>
+    </table>
+  >];
+  bloque17 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 17</td></tr>
+      <tr><td>012345678901234567890123456789...</td></tr>
+    </table>
+  >];
+  bloque18 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 18</td></tr>
+      <tr><td>456789012345678901234567890123...</td></tr>
+    </table>
+  >];
+  bloque19 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 19</td></tr>
+      <tr><td>890123456789012345678901234567...</td></tr>
+    </table>
+  >];
+  bloque20 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 20</td></tr>
+      <tr><td>234567890123456789012345678901...</td></tr>
+    </table>
+  >];
+  bloque21 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 21</td></tr>
+      <tr><td>678901234567890123456789012345...</td></tr>
+    </table>
+  >];
+  bloque22 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 22</td></tr>
+      <tr><td>012345678901234567890123456789...</td></tr>
+    </table>
+  >];
+  bloque23 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 23</td></tr>
+      <tr><td>456789012345678901234567890123...</td></tr>
+    </table>
+  >];
+  bloque24 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 24</td></tr>
+      <tr><td>890123456789012345678901234567...</td></tr>
+    </table>
+  >];
+  bloque25 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 25</td></tr>
+      <tr><td>234567890123456789012345678901...</td></tr>
+    </table>
+  >];
+  bloque26 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 26</td></tr>
+      <tr><td>678901234567890123456789012345...</td></tr>
+    </table>
+  >];
+  bloque27 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 27</td></tr>
+      <tr><td>012345678901234567890123456789...</td></tr>
+    </table>
+  >];
+  bloque28 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 28</td></tr>
+      <tr><td>456789012345678901234567890123...</td></tr>
+    </table>
+  >];
+  bloque29 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td bgcolor="#E6F5FF">Bloque Archivo 29</td></tr>
+      <tr><td>Giovanni</td></tr>
+    </table>
+  >];
+  bloque30 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 30</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>15</td></tr>
+      <tr><td>..</td><td>6</td></tr>
+      <tr><td>proyectos</td><td>16</td></tr>
+    </table>
+  >];
+  bloque31 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 31</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>16</td></tr>
+      <tr><td>..</td><td>15</td></tr>
+      <tr><td>fase1</td><td>17</td></tr>
+    </table>
+  >];
+  bloque32 [label=<
+    <table border="1" cellborder="1" cellspacing="0">
+      <tr><td colspan="2" bgcolor="#FFFFCC">Bloque Carpeta 32</td></tr>
+      <tr><td bgcolor="#F0E68C">b_name</td><td bgcolor="#F0E68C">b_inodo</td></tr>
+      <tr><td>.</td><td>17</td></tr>
+      <tr><td>..</td><td>16</td></tr>
+      <tr><td>entrada.txt</td><td>18</td></tr>
+    </table>
+  >];
+}

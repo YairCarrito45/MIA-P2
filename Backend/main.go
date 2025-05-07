@@ -44,16 +44,14 @@ func main() {
 	// Rutas disponibles
 	app.Post("/execute", handleExecute)
 	app.Post("/login", handleLogin)
-	app.Get("/filesystem/:id", handleFilesystem) // ✅ Endpoint para estructura de árbol
+	app.Get("/filesystem/:id", handleFilesystem)
 	app.Get("/disks", handleGetDisks)
-	app.Get("/diskinfo/:id", handleDiskInfo) // nuevo endpoint
-
-
+	app.Get("/diskinfo/:id", handleDiskInfo)
+	app.Get("/partitions", handlePartitions) // 🔸 NUEVO
 
 	// Iniciar servidor
 	log.Println("Servidor iniciado en http://localhost:3001")
 	log.Fatal(app.Listen(":3001"))
-	
 }
 
 // ---------- HANDLER: /execute ----------
@@ -140,19 +138,16 @@ func handleLogin(c *fiber.Ctx) error {
 func handleFilesystem(c *fiber.Ctx) error {
 	partitionID := c.Params("id")
 
-	// Obtener partición montada
 	partition, path, err := stores.GetMountedPartition(partitionID)
 	if err != nil {
 		return c.Status(fiber.StatusNotFound).SendString("Partición no montada")
 	}
 
-	// Leer SuperBloque
 	var sb structures.SuperBlock
 	if err := sb.Deserialize(path, int64(partition.Part_start)); err != nil {
 		return c.Status(fiber.StatusInternalServerError).SendString("Error al leer SuperBlock")
 	}
 
-	// Leer estructura de carpetas
 	root, err := sb.ReadDirectoryTree(path)
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).SendString("Error al leer árbol de directorios")
@@ -160,7 +155,6 @@ func handleFilesystem(c *fiber.Ctx) error {
 
 	return c.JSON(root)
 }
-
 
 // ---------- HANDLER: /disks ----------
 func handleGetDisks(c *fiber.Ctx) error {
@@ -176,28 +170,61 @@ func handleDiskInfo(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusNotFound).SendString("Partición no montada")
 	}
 
-	// Leer MBR
 	mbr, err := structures.ReadMBR(info.Path)
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).SendString("Error al leer MBR")
 	}
 
-	// Buscar la partición
 	partition, _ := mbr.GetPartitionByName(info.Name)
 	if partition == nil {
 		return c.Status(fiber.StatusNotFound).SendString("Partición no encontrada")
 	}
 
-	// Preparar respuesta
 	resp := map[string]interface{}{
 		"name":                info.Name,
 		"path":                info.Path,
 		"partition_id":        id,
 		"mounted_partitions": []string{id},
 		"size":                fmt.Sprintf("%d bytes", partition.Part_size),
-		"fit": string(partition.Part_fit[0]),
-
+		"fit":                 string(partition.Part_fit[0]),
 	}
 
 	return c.JSON(resp)
+}
+
+// ---------- HANDLER: /partitions ----------
+func handlePartitions(c *fiber.Ctx) error {
+	diskPath := c.Query("path")
+	if diskPath == "" {
+		return c.Status(fiber.StatusBadRequest).SendString("Falta el parámetro path")
+	}
+
+	mbr, err := structures.ReadMBR(diskPath)
+	if err != nil {
+		return c.Status(fiber.StatusInternalServerError).SendString("No se pudo leer el disco")
+	}
+
+	var result []map[string]string
+	for _, part := range mbr.Mbr_partitions {
+		if part.Part_status[0] != '1' {
+			continue
+		}
+		result = append(result, map[string]string{
+			"id":     generateID(diskPath, part.Part_name),
+			"name":   strings.Trim(string(part.Part_name[:]), "\x00"),
+			"size":   fmt.Sprintf("%d bytes", part.Part_size),
+			"fit":    string(part.Part_fit[:]),
+			"status": "activa",
+		})
+	}
+	
+
+	return c.JSON(result)
+}
+
+func generateID(path string, name [16]byte) string {
+	nameStr := strings.Trim(string(name[:]), "\x00")
+	pathHash := fmt.Sprintf("%x", path)
+	letter := string(pathHash[len(pathHash)-1])
+	return fmt.Sprintf("%s%s", strings.ToUpper(nameStr[:2]), letter)
 }

@@ -4,7 +4,7 @@ import "./App.css";
 import LoginForm from "./LoginForm";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import DiskSelector from "./DiskSelector";
-import DiskViewer from "./DiskViewer";
+import DiskViewer from "./PartitionSelector";
 
 function App() {
   const [commandInput, setCommandInput] = useState("");

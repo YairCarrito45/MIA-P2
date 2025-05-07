@@ -12,10 +12,6 @@ function DiskSelector() {
       .catch((err) => console.error("Error al cargar discos:", err));
   }, []);
 
-  const handleSelect = (disk) => {
-    navigate(`/viewer/${disk.name}`, { state: { disk } });
-  };
-
   return (
     <div style={styles.page}>
       <div style={styles.card}>
@@ -23,24 +19,20 @@ function DiskSelector() {
         <p style={styles.subtitle}>Seleccione el disco que desea visualizar:</p>
         <div style={styles.grid}>
           {disks.map((disk) => (
-            <div
-              key={disk.name}
-              style={styles.diskCard}
-              onClick={() => handleSelect(disk)}
-              title={`Capacidad: ${disk.size}\nFit: ${disk.fit}\nParticiones: ${disk.mounted_partitions.join(", ") || "Ninguna"}`}
-            >
-              <img
-                src="/disk-icon.png"
-                alt="Disco"
-                style={styles.diskImage}
-              />
+            <div key={disk.name} style={styles.diskCard}>
+              <img src="/disk-icon.png" alt="Disco" style={styles.diskImage} />
               <p style={styles.diskLabel}>{disk.name}</p>
+              <div style={styles.diskInfo}>
+                <p><strong>Ruta:</strong> {disk.path}</p>
+                <p><strong>Capacidad:</strong> {disk.size}</p>
+                <p><strong>Fit:</strong> {disk.fit}</p>
+                <p><strong>Particiones:</strong> {disk.mounted_partitions.join(", ") || "Ninguna"}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
-  
-      {/* 🔙 Botón de volver al menú */}
+
       <button
         onClick={() => navigate("/")}
         style={{
@@ -58,7 +50,6 @@ function DiskSelector() {
       </button>
     </div>
   );
-  
 }
 
 const styles = {
@@ -70,6 +61,7 @@ const styles = {
     alignItems: "center",
     fontFamily: "Segoe UI, sans-serif",
     padding: "2rem",
+    flexDirection: "column",
   },
   card: {
     backgroundColor: "#ffffff",
@@ -77,7 +69,7 @@ const styles = {
     borderRadius: "12px",
     boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
     textAlign: "center",
-    maxWidth: "700px",
+    maxWidth: "900px",
     width: "100%",
   },
   title: {
@@ -96,26 +88,30 @@ const styles = {
     flexWrap: "wrap",
   },
   diskCard: {
-    cursor: "pointer",
     padding: "1rem",
     borderRadius: "10px",
     backgroundColor: "#eef7f9",
-    width: "100px",
-    height: "120px",
+    width: "220px",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
     transition: "transform 0.2s",
-    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
   },
   diskImage: {
     width: "48px",
     marginBottom: "0.5rem",
   },
   diskLabel: {
-    fontSize: "0.9rem",
+    fontSize: "0.95rem",
     fontWeight: "bold",
+    marginBottom: "0.4rem",
+  },
+  diskInfo: {
+    fontSize: "0.75rem",
+    textAlign: "left",
+    lineHeight: "1.2rem",
+    width: "100%",
   },
 };
 

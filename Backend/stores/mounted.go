@@ -55,13 +55,11 @@ func GetMountedPartitionRep(id string) (*structures.MBR, *structures.SuperBlock,
 
 	path := info.Path
 
-	// Leer el MBR
 	mbr, err := structures.ReadMBR(path)
 	if err != nil {
 		return nil, nil, "", err
 	}
 
-	// Buscar partición primaria o extendida
 	partition, _ := mbr.GetPartitionByName(info.Name)
 	if partition != nil {
 		var sb structures.SuperBlock
@@ -72,7 +70,6 @@ func GetMountedPartitionRep(id string) (*structures.MBR, *structures.SuperBlock,
 		return &mbr, &sb, path, nil
 	}
 
-	// Si no es primaria, buscar como partición lógica
 	ebr, err := mbr.GetLogicalPartitionByName(info.Name, path)
 	if err != nil {
 		return nil, nil, "", errors.New("partición no encontrada")
@@ -101,7 +98,6 @@ func GetMountedPartitionSuperblock(id string) (*structures.SuperBlock, *structur
 		return nil, nil, "", err
 	}
 
-	// Buscar partición primaria
 	partition, _ := mbr.GetPartitionByName(info.Name)
 	if partition != nil {
 		var sb structures.SuperBlock
@@ -112,7 +108,6 @@ func GetMountedPartitionSuperblock(id string) (*structures.SuperBlock, *structur
 		return &sb, partition, path, nil
 	}
 
-	// Si no está como primaria, buscar lógica
 	ebr, err := mbr.GetLogicalPartitionByName(info.Name, path)
 	if err != nil {
 		return nil, nil, "", errors.New("partición no encontrada")
@@ -164,6 +159,7 @@ func ShowMountedPartitions() string {
 
 type MountedDisk struct {
 	Name              string   `json:"name"`
+	Path              string   `json:"path"` // NUEVO
 	Size              string   `json:"size"`
 	Fit               string   `json:"fit"`
 	MountedPartitions []string `json:"mounted_partitions"`
@@ -176,7 +172,6 @@ func GetMountedDisks() []MountedDisk {
 	for id, info := range MountedPartitions {
 		path := info.Path
 
-		// Leer el MBR
 		mbr, err := structures.ReadMBR(path)
 		if err != nil {
 			continue
@@ -189,6 +184,7 @@ func GetMountedDisks() []MountedDisk {
 
 			diskMap[path] = &MountedDisk{
 				Name:              name,
+				Path:              path, // NUEVO
 				Size:              size,
 				Fit:               fit,
 				MountedPartitions: []string{},

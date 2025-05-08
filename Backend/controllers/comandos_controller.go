@@ -131,3 +131,29 @@ func getMountedPartitionIDs(path string) []string {
 	}
 	return ids
 }
+
+
+// GetDisks devuelve una lista de discos montados (desde Estructuras.Montadas)
+func GetDisks(c *fiber.Ctx) error {
+	var discosMap = make(map[string]map[string]interface{})
+
+	for _, montada := range Estructuras.Montadas {
+		if _, ok := discosMap[montada.PathM]; !ok {
+			discosMap[montada.PathM] = map[string]interface{}{
+				"name":               filepath.Base(montada.PathM),
+				"path":               montada.PathM,
+				"size":               0,    // puedes obtener el tamaño del disco si lo deseas
+				"fit":                "WF", // o lo que se haya usado
+				"mounted_partitions": []string{},
+			}
+		}
+		discosMap[montada.PathM]["mounted_partitions"] = append(discosMap[montada.PathM]["mounted_partitions"].([]string), montada.Id)
+	}
+
+	var discos []map[string]interface{}
+	for _, info := range discosMap {
+		discos = append(discos, info)
+	}
+
+	return c.JSON(discos)
+}

@@ -23,6 +23,9 @@ func main() {
 	app.Post("/login", controllers.HandleLogin)
 	app.Get("/diskinfo/:id", controllers.HandleDiskInfo)
 
+	api.Get("/disks", controllers.GetDisks) // 👈 nueva línea
+
+
 	// Iniciar servidor
 	log.Println("Servidor escuchando en http://localhost:8080")
 	log.Fatal(app.Listen(":8080"))

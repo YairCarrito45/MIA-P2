@@ -6,7 +6,8 @@ function DiskSelector() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3001/disks")
+    fetch("http://localhost:8080/api/disks")
+
       .then((res) => res.json())
       .then((data) => setDisks(data))
       .catch((err) => console.error("Error al cargar discos:", err));

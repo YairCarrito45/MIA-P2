@@ -23,8 +23,9 @@ func main() {
 	app.Post("/login", controllers.HandleLogin)
 	app.Get("/diskinfo/:id", controllers.HandleDiskInfo)
 
-	api.Get("/disks", controllers.GetDisks) // 👈 nueva línea
+	api.Get("/disks", controllers.GetDisks)
 
+	api.Get("/partitions", controllers.HandlePartitions)
 
 	// Iniciar servidor
 	log.Println("Servidor escuchando en http://localhost:8080")

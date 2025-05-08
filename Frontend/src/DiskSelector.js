@@ -8,6 +8,7 @@ function DiskSelector() {
   useEffect(() => {
     fetch("http://localhost:8080/api/disks")
 
+
       .then((res) => res.json())
       .then((data) => setDisks(data))
       .catch((err) => console.error("Error al cargar discos:", err));
@@ -34,7 +35,7 @@ function DiskSelector() {
               <p style={styles.diskLabel}>{disk.name}</p>
               <div style={styles.diskInfo}>
                 <p><strong>Ruta:</strong> {disk.path}</p>
-                <p><strong>Capacidad:</strong> {disk.size}</p>
+                <p><strong>Capacidad:</strong> {(disk.size / (1024 * 1024)).toFixed(2)} MB</p>
                 <p><strong>Fit:</strong> {disk.fit}</p>
                 <p><strong>Particiones:</strong> {disk.mounted_partitions.join(", ") || "Ninguna"}</p>
               </div>

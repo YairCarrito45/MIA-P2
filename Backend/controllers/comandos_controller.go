@@ -1,12 +1,13 @@
 package controllers
 
 import (
+	"MIA-P2/Backend/Estructuras"
 	"MIA-P2/Backend/models"
 	"MIA-P2/Backend/services"
-	"MIA-P2/Backend/Estructuras"
 	"fmt"
-	"strings"
+	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -71,7 +72,7 @@ func GetStatus(c *fiber.Ctx) error {
 	})
 }
 
-// HandleLogin procesa una solicitud de inicio de sesión (login)
+// HandleLogin procesa una solicitud de inicio de sesión
 func HandleLogin(c *fiber.Ctx) error {
 	var loginData struct {
 		Username    string `json:"username"`
@@ -99,18 +100,24 @@ func HandleLogin(c *fiber.Ctx) error {
 	})
 }
 
-// HandleDiskInfo devuelve información del disco montado
+// HandleDiskInfo devuelve información de un disco montado
 func HandleDiskInfo(c *fiber.Ctx) error {
 	id := c.Params("id")
 
 	for _, montada := range Estructuras.Montadas {
 		if montada.Id == id {
+			// Obtener tamaño del archivo del disco
+			info, err := os.Stat(montada.PathM)
+			size := int64(0)
+			if err == nil {
+				size = info.Size()
+			}
 			return c.JSON(fiber.Map{
 				"name":               filepath.Base(montada.PathM),
 				"path":               montada.PathM,
 				"id":                 montada.Id,
-				"fit":                "WF", // ajustar si es necesario
-				"size":               0,    // puedes obtenerlo leyendo el MBR si quieres
+				"fit":                "WF", // modificar si se tiene info real del fit
+				"size":               size,
 				"mounted_partitions": getMountedPartitionIDs(montada.PathM),
 			})
 		}
@@ -121,7 +128,41 @@ func HandleDiskInfo(c *fiber.Ctx) error {
 	})
 }
 
-// Función auxiliar: devuelve todos los IDs montados del mismo disco
+// GetDisks devuelve una lista de discos con o sin particiones montadas
+func GetDisks(c *fiber.Ctx) error {
+	var discosMap = make(map[string]map[string]interface{})
+
+	for _, montada := range Estructuras.Montadas {
+		info, err := os.Stat(montada.PathM)
+		size := int64(0)
+		if err == nil {
+			size = info.Size()
+		}
+
+		if _, ok := discosMap[montada.PathM]; !ok {
+			discosMap[montada.PathM] = map[string]interface{}{
+				"name":               filepath.Base(montada.PathM),
+				"path":               montada.PathM,
+				"size":               size, // ✅ aquí lo asignas correctamente
+				"fit":                "WF", // ajusta si usas otro
+				"mounted_partitions": []string{},
+			}
+		}
+		discosMap[montada.PathM]["mounted_partitions"] = append(
+			discosMap[montada.PathM]["mounted_partitions"].([]string),
+			montada.Id,
+		)
+	}
+
+	var discos []map[string]interface{}
+	for _, info := range discosMap {
+		discos = append(discos, info)
+	}
+
+	return c.JSON(discos)
+}
+
+// Función auxiliar para IDs de particiones montadas por disco
 func getMountedPartitionIDs(path string) []string {
 	var ids []string
 	for _, m := range Estructuras.Montadas {
@@ -133,27 +174,30 @@ func getMountedPartitionIDs(path string) []string {
 }
 
 
-// GetDisks devuelve una lista de discos montados (desde Estructuras.Montadas)
-func GetDisks(c *fiber.Ctx) error {
-	var discosMap = make(map[string]map[string]interface{})
+// HandlePartitions devuelve las particiones activas para un disco
+func HandlePartitions(c *fiber.Ctx) error {
+	path := c.Query("path")
+	if strings.TrimSpace(path) == "" {
+		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
+			"error": "El parámetro 'path' es obligatorio",
+		})
+	}
 
+	var particiones []fiber.Map
 	for _, montada := range Estructuras.Montadas {
-		if _, ok := discosMap[montada.PathM]; !ok {
-			discosMap[montada.PathM] = map[string]interface{}{
-				"name":               filepath.Base(montada.PathM),
-				"path":               montada.PathM,
-				"size":               0,    // puedes obtener el tamaño del disco si lo deseas
-				"fit":                "WF", // o lo que se haya usado
-				"mounted_partitions": []string{},
-			}
+		if montada.PathM == path {
+			particiones = append(particiones, fiber.Map{
+				"id":     montada.Id,
+				"name":   filepath.Base(path),
+				"fit":    "WF", // Ajuste por defecto
+				"size":   0,    // Puedes usar Acciones.ReadObject para leer el MBR y obtener el tamaño
+				"status": "montada",
+			})
 		}
-		discosMap[montada.PathM]["mounted_partitions"] = append(discosMap[montada.PathM]["mounted_partitions"].([]string), montada.Id)
 	}
 
-	var discos []map[string]interface{}
-	for _, info := range discosMap {
-		discos = append(discos, info)
+	if len(particiones) == 0 {
+		return c.JSON([]fiber.Map{}) // Devuelve arreglo vacío si no hay montadas
 	}
-
-	return c.JSON(discos)
+	return c.JSON(particiones)
 }

@@ -1,8 +1,8 @@
 package AdminDiscos
 
 import (
-	"Gestor/Acciones"
-	"Gestor/utils"
+	"MIA-P2/Backend/Acciones"
+	"MIA-P2/Backend/utils"
 	"fmt"
 	"os"
 	"strings"

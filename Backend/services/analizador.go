@@ -6,13 +6,13 @@ import (
 	"strings"
 	"unicode"
 
-	admindiscos "Gestor/Comandos/AdminDiscos"
-	filesFolders "Gestor/Comandos/AdminFiles"
-	users "Gestor/Comandos/AdminUserGroup"
-	rep "Gestor/Comandos/Rep"
-	fileSystem "Gestor/Comandos/adminSistemaArchivos"
+	admindiscos "MIA-P2/Backend/Comandos/AdminDiscos"
+	filesFolders "MIA-P2/Backend/Comandos/AdminFiles"
+	users "MIA-P2/Backend/Comandos/AdminUserGroup"
+	rep "MIA-P2/Backend/Comandos/Rep"
+	fileSystem "MIA-P2/Backend/Comandos/adminSistemaArchivos"
 
-	"Gestor/models"
+	"MIA-P2/Backend/models"
 )
 
 // AnalizarComando procesa un comando y devuelve el resultado

@@ -1,4 +1,4 @@
-module Gestor
+module MIA-P2/Backend
 
 go 1.22.12
 

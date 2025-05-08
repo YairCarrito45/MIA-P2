@@ -10,11 +10,11 @@ TablaReportNodo [ label = < <table border="1">
  </tr> 
  <tr>
   <td bgcolor='#AFA1D1'> mbr_fecha_creacion </td> 
-  <td bgcolor='#AFA1D1'> 07/05/2025 17:30:09 </td> 
+  <td bgcolor='#AFA1D1'> 07/05/2025 19:14:00 </td> 
  </tr> 
  <tr>
   <td bgcolor='Azure'> mbr_disk_signature </td> 
-  <td bgcolor='Azure'> 930 </td> 
+  <td bgcolor='Azure'> 14 </td> 
  </tr>  
  <tr>
  <td bgcolor='#028f76' COLSPAN="2"> PARTICION </td> 

@@ -1,9 +1,9 @@
 package Rep
 
 import (
-	"Gestor/Acciones"
-	"Gestor/Estructuras"
-	"Gestor/utils"
+	"MIA-P2/Backend/Acciones"
+	"MIA-P2/Backend/Estructuras"
+	"MIA-P2/Backend/utils"
 	"bytes"
 	"encoding/binary"
 	"fmt"
@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	strExt2 "Gestor/Estructuras/SystemFileExt2"
+	strExt2 "MIA-P2/Backend/Estructuras/SystemFileExt2"
 )
 
 func reporte_block(path string, id string, logger *utils.Logger) {

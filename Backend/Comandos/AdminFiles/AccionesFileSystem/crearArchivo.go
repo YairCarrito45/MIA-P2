@@ -1,10 +1,10 @@
 package AccionesFileSystem
 
 import (
-	"Gestor/Acciones"
-	"Gestor/Estructuras"
-	strExt2 "Gestor/Estructuras/SystemFileExt2"
-	"Gestor/utils"
+	"MIA-P2/Backend/Acciones"
+	"MIA-P2/Backend/Estructuras"
+	strExt2 "MIA-P2/Backend/Estructuras/SystemFileExt2"
+	"MIA-P2/Backend/utils"
 	"encoding/binary"
 	"fmt"
 	"os"

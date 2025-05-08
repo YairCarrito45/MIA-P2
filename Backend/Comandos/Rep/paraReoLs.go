@@ -1,15 +1,15 @@
 package Rep
 
 import (
-	"Gestor/Acciones"
-	"Gestor/Estructuras"
-	"Gestor/utils"
+	"MIA-P2/Backend/Acciones"
+	"MIA-P2/Backend/Estructuras"
+	"MIA-P2/Backend/utils"
 	"encoding/binary"
 	"fmt"
 	"os"
 	"path/filepath"
 
-	strExt2 "Gestor/Estructuras/SystemFileExt2"
+	strExt2 "MIA-P2/Backend/Estructuras/SystemFileExt2"
 
 	"strings"
 )

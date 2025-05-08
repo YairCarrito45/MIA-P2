@@ -1,12 +1,7 @@
 package main
 
-/*
-	Aplicación web para gestionar un sistema de archivos EXT2,
-	usando React para el frontend y Go para el backend.
-*/
-
 import (
-	"Gestor/controllers"
+	"MIA-P2/Backend/controllers"
 	"log"
 
 	"github.com/gofiber/fiber/v2"
@@ -21,12 +16,12 @@ func main() {
 
 	// Grupo /api
 	api := app.Group("/api")
-
-	// Ruta para analizar comandos
 	api.Post("/analizar", controllers.AnalizarComandos)
-
-	// Ruta de estado
 	api.Get("/status", controllers.GetStatus)
+
+	// ✅ Nuevas rutas directas para login y disco
+	app.Post("/login", controllers.HandleLogin)
+	app.Get("/diskinfo/:id", controllers.HandleDiskInfo)
 
 	// Iniciar servidor
 	log.Println("Servidor escuchando en http://localhost:8080")

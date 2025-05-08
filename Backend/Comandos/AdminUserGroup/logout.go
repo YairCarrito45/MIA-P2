@@ -1,8 +1,8 @@
 package AdminUserGroup
 
 import (
-	"Gestor/Estructuras"
-	"Gestor/utils"
+	"MIA-P2/Backend/Estructuras"
+	"MIA-P2/Backend/utils"
 	"fmt"
 )
 

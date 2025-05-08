@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 
-	"Gestor/Acciones"
-	"Gestor/Estructuras"
-	"Gestor/utils"
+	"MIA-P2/Backend/Acciones"
+	"MIA-P2/Backend/Estructuras"
+	"MIA-P2/Backend/utils"
 )
 
 /*

@@ -15,19 +15,22 @@ function LoginForm({ onLogin }) {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/login", {
+      const response = await fetch("http://localhost:8080/api/analizar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password, partition_id: partitionId }),
+        body: JSON.stringify({
+          Texto: `login -user=${username} -pass=${password} -id=${partitionId}`
+        }),
       });
 
-      if (!response.ok) {
+      const result = await response.json();
+
+      if (!result.output || result.output.toLowerCase().includes("error")) {
         alert("Usuario o contraseña incorrectos o partición no montada");
         return;
       }
 
-      // ✅ Obtener detalles reales del disco tras login exitoso
-      const infoRes = await fetch(`http://localhost:3001/diskinfo/${partitionId}`);
+      const infoRes = await fetch(`http://localhost:8080/diskinfo/${partitionId}`);
       if (!infoRes.ok) {
         alert("Error al obtener información del disco");
         return;
@@ -39,7 +42,7 @@ function LoginForm({ onLogin }) {
         username,
         partitionId,
         rememberUser,
-        ...diskInfo, // incluye name, path, size, fit, mounted_partitions
+        ...diskInfo,
       });
     } catch (error) {
       alert("Error al comunicarse con el backend.");

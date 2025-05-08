@@ -1,8 +1,8 @@
 package AdminDiscos
 
 import (
-	"Gestor/Estructuras"
-	"Gestor/utils"
+	"MIA-P2/Backend/Estructuras"
+	"MIA-P2/Backend/utils"
 )
 
 func Mounted(parametros []string) string {

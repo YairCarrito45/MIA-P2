@@ -1,11 +1,11 @@
 package AdminFiles
 
 import (
-	"Gestor/Acciones"
-	accionComando "Gestor/Comandos/AdminFiles/AccionesFileSystem"
-	"Gestor/Estructuras"
-	"Gestor/Estructuras/SystemFileExt2"
-	"Gestor/utils"
+	"MIA-P2/Backend/Acciones"
+	accionComando "MIA-P2/Backend/Comandos/AdminFiles/AccionesFileSystem"
+	"MIA-P2/Backend/Estructuras"
+	"MIA-P2/Backend/Estructuras/SystemFileExt2"
+	"MIA-P2/Backend/utils"
 	"fmt"
 	"io/ioutil"
 	"os"

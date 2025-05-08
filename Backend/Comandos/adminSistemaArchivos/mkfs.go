@@ -1,10 +1,10 @@
 package AdminSistemaArchivos
 
 import (
-	"Gestor/Acciones"
-	"Gestor/Estructuras"
-	ext2 "Gestor/Estructuras/SystemFileExt2"
-	"Gestor/utils"
+	"MIA-P2/Backend/Acciones"
+	"MIA-P2/Backend/Estructuras"
+	ext2 "MIA-P2/Backend/Estructuras/SystemFileExt2"
+	"MIA-P2/Backend/utils"
 	"encoding/binary"
 	"fmt"
 	"strings"

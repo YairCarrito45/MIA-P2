@@ -1,7 +1,7 @@
 package SystemFileExt2
 
 import (
-	"Gestor/Acciones"
+	"MIA-P2/Backend/Acciones"
 	"encoding/binary"
 	"fmt"
 	"os"

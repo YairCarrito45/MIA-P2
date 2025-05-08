@@ -12,7 +12,7 @@ function PartitionSelector() {
 
   useEffect(() => {
     if (diskPath) {
-      fetch(`http://localhost:3001/partitions?path=${encodeURIComponent(diskPath)}`)
+      fetch(`http://localhost:8080/api/partitions?path=${encodeURIComponent(diskPath)}`)
         .then((res) => res.json())
         .then((data) => setPartitions(Array.isArray(data) ? data : []))
         .catch(() => setPartitions([]));
@@ -48,7 +48,7 @@ function PartitionSelector() {
                 style={styles.partitionCard}
                 onClick={() => handleSelectPartition(p)}
               >
-                <img src="/partition-icon.png" alt="Partición" style={styles.img} />
+                <img src="/particion-icon.png" alt="Partición" style={{ width: "40px", marginBottom: "8px" }} />
                 <p><strong>{p.name}</strong></p>
                 <p><strong>Tamaño:</strong> {p.size}</p>
                 <p><strong>Fit:</strong> {p.fit}</p>

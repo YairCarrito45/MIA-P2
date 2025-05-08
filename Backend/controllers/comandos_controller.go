@@ -4,6 +4,7 @@ import (
 	"MIA-P2/Backend/Estructuras"
 	"MIA-P2/Backend/models"
 	"MIA-P2/Backend/services"
+	"encoding/binary"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -183,21 +184,41 @@ func HandlePartitions(c *fiber.Ctx) error {
 		})
 	}
 
+	// Abrir el archivo del disco
+	archivo, err := os.Open(path)
+	if err != nil {
+		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
+			"error": "No se pudo abrir el archivo del disco: " + err.Error(),
+		})
+	}
+	defer archivo.Close()
+
+	// Leer el MBR desde el inicio
+	var mbr Estructuras.MBR
+	if err := binary.Read(archivo, binary.LittleEndian, &mbr); err != nil {
+		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
+			"error": "No se pudo leer el MBR: " + err.Error(),
+		})
+	}
+
 	var particiones []fiber.Map
 	for _, montada := range Estructuras.Montadas {
 		if montada.PathM == path {
-			particiones = append(particiones, fiber.Map{
-				"id":     montada.Id,
-				"name":   filepath.Base(path),
-				"fit":    "WF", // Ajuste por defecto
-				"size":   0,    // Puedes usar Acciones.ReadObject para leer el MBR y obtener el tamaño
-				"status": "montada",
-			})
+			// Buscar la partición montada en el MBR para obtener su tamaño
+			for _, part := range mbr.Mbr_partitions {
+				if Estructuras.GetId(string(part.Part_id[:])) == montada.Id {
+					particiones = append(particiones, fiber.Map{
+						"id":     montada.Id,
+						"name":   Estructuras.GetName(string(part.Part_name[:])),
+						"fit":    string(part.Part_fit[:]),
+						"size":   part.Part_size,
+						"status": "montada",
+					})
+					break
+				}
+			}
 		}
 	}
 
-	if len(particiones) == 0 {
-		return c.JSON([]fiber.Map{}) // Devuelve arreglo vacío si no hay montadas
-	}
 	return c.JSON(particiones)
 }

@@ -10,7 +10,8 @@ function DiskViewer() {
 
   useEffect(() => {
     if (disk?.partition_id) {
-      fetch(`http://localhost:3001/filesystem/${disk.partition_id}`)
+      fetch(`http://localhost:8080/filesystem/${disk.partition_id}`)
+
         .then((res) => res.json())
         .then((data) => setStructure(data))
         .catch(() => setStructure({ error: true }));
